@@ -49,10 +49,10 @@ class Game
 
   def turn
     puts "Player #{current_player.token} turn:"
-    current_player.move(board)
-    # if current_player.move(board) == "invalid"
-    #   turn
-    # end
+    # current_player.move(board)
+    if current_player.move(board) == "invalid"
+      turn
+    end
     board.display
   end
 
