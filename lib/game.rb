@@ -48,18 +48,20 @@ class Game
   end
 
   def turn
+    puts "Player #{current_player.token} turn:"
     if current_player.move(board) == "invalid"
       turn
     end
+    board.display
   end
 
   def play
-
     if won?
       return puts "Congratulations #{winner}!"
     end
     if draw?
-      return puts "Cat's Game!"
+      puts "Cat's Game!"
+      return true
     end
     if over?
       return true
