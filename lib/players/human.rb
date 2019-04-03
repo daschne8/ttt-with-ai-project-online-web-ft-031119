@@ -3,12 +3,7 @@ module Players
 
     def move(board)
       input = gets.chomp
-      if board.valid_move?(input)
-        board.update(input,self)
-        return input
-      else
-        return "invalid"
-      end
+      return input
     end
 
   end
