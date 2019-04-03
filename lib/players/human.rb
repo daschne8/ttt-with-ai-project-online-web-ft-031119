@@ -8,7 +8,6 @@ module Players
         return input
       else
         return "invalid"
-        move
       end
     end
 
